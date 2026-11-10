@@ -1,54 +1,13 @@
 import {
   ArrowDown,
-  ArrowDownRight,
+  ArrowRight,
   ArrowUpRight,
   Check,
-  Code2,
-  Database,
   Github,
-  Globe2,
-  GraduationCap,
   Linkedin,
   Mail,
   MapPin,
-  Monitor,
-  Server,
-  ShieldCheck,
-  Workflow,
 } from "lucide-react";
-
-const skills = [
-  {
-    icon: Monitor,
-    title: "Frontend",
-    items: ["React", "Redux", "TypeScript", "JavaScript ES6+", "HTML5", "CSS3", "Responsive Design"],
-  },
-  {
-    icon: Server,
-    title: "Backend",
-    items: ["Node.js", "Express", "GraphQL", "REST APIs", ".NET"],
-  },
-  {
-    icon: Database,
-    title: "Database",
-    items: ["MySQL", "SQL"],
-  },
-  {
-    icon: Globe2,
-    title: "Cloud & DevOps",
-    items: ["AWS", "Microsoft Azure", "Jenkins (CI/CD)", "Grafana"],
-  },
-  {
-    icon: ShieldCheck,
-    title: "Reliability & Support",
-    items: ["Incident Management", "Monitoring", "Troubleshooting", "Release Management"],
-  },
-  {
-    icon: Workflow,
-    title: "Tools & Platforms",
-    items: ["Git", "Jira", "Confluence", "ServiceNow", "Decisions BPM"],
-  },
-];
 
 const experience = [
   {
@@ -56,13 +15,12 @@ const experience = [
     location: "Remote · Singapore",
     role: "Application Developer",
     dates: "Nov 2024 — Present",
-    type: "Current role",
+    current: true,
     stack: ["Decisions BPM", "SQL", "Jira"],
     points: [
-      "Maintain and enhance business-critical workflow applications built on Decisions BPM.",
-      "Investigate and resolve production workflow issues, helping keep business processes reliable.",
-      "Translate business requirements into workflow enhancements and new features backed by SQL data.",
-      "Monitor application performance and uptime, and support ongoing operational improvements.",
+      "Maintain and improve business-critical workflow applications built on Decisions BPM.",
+      "Investigate production issues and turn business requirements into practical workflow enhancements.",
+      "Use SQL-backed data and application monitoring to support reliable day-to-day operations.",
     ],
   },
   {
@@ -72,13 +30,9 @@ const experience = [
     dates: "Aug 2022 — Oct 2024",
     stack: ["React", "Node.js", "Express", ".NET", "Azure", "Grafana", "Jenkins"],
     points: [
-      "Built and maintained reusable React components, improving usability across devices and browsers.",
-      "Developed server-side features and REST APIs with Node.js and Express, integrating with .NET APIs.",
-      "Implemented authentication and security-related application features.",
-      "Refactored legacy code, resolved defects, and optimized backend performance.",
-      "Used Grafana for application monitoring and supported production incident response and ITIL-aligned processes.",
-      "Supported deployments, release management, automation, and security and compliance activities.",
-      "Worked with cross-functional teams and client stakeholders to deliver application changes.",
+      "Built and maintained React interfaces and server-side features using Node.js and Express.",
+      "Integrated with .NET APIs, implemented authentication features, and improved legacy code.",
+      "Supported production monitoring, incident response, deployments, and release activities.",
     ],
   },
   {
@@ -88,28 +42,46 @@ const experience = [
     dates: "Jan 2021 — Jun 2022",
     stack: ["React", "TypeScript", "Node.js", "Express", "GraphQL"],
     points: [
-      "Developed responsive web applications using React and TypeScript.",
-      "Built backend services with Node.js, Express, and GraphQL, including supporting database design.",
-      "Improved application usability and navigation to create clearer user experiences.",
-      "Prepared and maintained test plans, procedures, and results to support software quality.",
+      "Developed responsive web applications with React and TypeScript.",
+      "Created backend services with Node.js, Express, and GraphQL, with supporting database work.",
+      "Improved application usability and contributed to test plans and software quality checks.",
     ],
   },
 ];
 
-function SectionHeading({
-  eyebrow,
-  title,
-  description,
-}: {
-  eyebrow: string;
-  title: string;
-  description?: string;
-}) {
+const capabilities = [
+  {
+    number: "01",
+    title: "Frontend",
+    detail: "React, Redux, TypeScript, JavaScript, HTML, CSS, responsive interfaces",
+  },
+  {
+    number: "02",
+    title: "Backend",
+    detail: "Node.js, Express, GraphQL, REST APIs, .NET",
+  },
+  {
+    number: "03",
+    title: "Data",
+    detail: "MySQL, SQL, Supabase, PostgreSQL",
+  },
+  {
+    number: "04",
+    title: "Cloud & delivery",
+    detail: "AWS, Azure, Jenkins, Git, release management",
+  },
+  {
+    number: "05",
+    title: "Operations",
+    detail: "Grafana, monitoring, troubleshooting, incident management",
+  },
+];
+
+function SectionLabel({ number, children }: { number: string; children: React.ReactNode }) {
   return (
-    <div className="section-heading">
-      <span className="eyebrow">{eyebrow}</span>
-      <h2>{title}</h2>
-      {description ? <p>{description}</p> : null}
+    <div className="section-label">
+      <span>{number}</span>
+      <span>{children}</span>
     </div>
   );
 }
@@ -117,174 +89,103 @@ function SectionHeading({
 export default function Home() {
   return (
     <main>
-      <header className="hero" id="top">
-        <nav className="nav container" aria-label="Main navigation">
-          <a className="wordmark" href="#top" aria-label="Dan Saldariega home">
-            DS<span>.</span>
-          </a>
-          <div className="nav-links">
+      <header className="site-header">
+        <div className="site-header-inner">
+          <a className="brand" href="#top" aria-label="Dan Saldariega, home">dan<span>.</span></a>
+          <nav className="main-nav" aria-label="Main navigation">
             <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
+            <a href="#work">Experience</a>
             <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-          </div>
-          <a className="nav-contact" href="mailto:dsaldariega@gmail.com">
-            Let&apos;s talk <ArrowUpRight size={15} />
+            <a href="#contact">Contact</a>
+          </nav>
+          <a className="header-link" href="mailto:dsaldariega@gmail.com">
+            Say hello <ArrowUpRight size={15} />
           </a>
-        </nav>
-
-        <div className="hero-content container">
-          <div className="hero-copy">
-            <div className="availability"><span /> SOFTWARE ENGINEER · CEBU, PH</div>
-            <p className="hero-intro">Hello, I&apos;m</p>
-            <h1>Dan Christopher <span>Saldariega.</span></h1>
-            <h2>I build thoughtful digital experiences and dependable software.</h2>
-            <p className="hero-description">
-              Software Engineer with 5+ years of experience building and maintaining
-              web applications — from polished frontend interfaces to reliable
-              backend services and production support.
-            </p>
-            <div className="hero-actions">
-              <a className="button button-primary" href="#experience">
-                Explore my work <ArrowDownRight size={17} />
-              </a>
-              <a className="button button-ghost" href="mailto:dsaldariega@gmail.com">
-                Get in touch <ArrowUpRight size={16} />
-              </a>
-            </div>
-            <div className="hero-meta">
-              <span><MapPin size={14} /> Liloan, Cebu, Philippines</span>
-              <span className="meta-divider" />
-              <span>React · TypeScript · Node.js</span>
-            </div>
-          </div>
-
-          <div className="hero-visual" aria-label="Software engineering illustration">
-            <div className="visual-orbit orbit-one" />
-            <div className="visual-orbit orbit-two" />
-            <div className="visual-glow" />
-            <div className="code-card">
-              <div className="code-top">
-                <div className="window-dots"><i /><i /><i /></div>
-                <span>building-things.ts</span>
-                <Code2 size={15} />
-              </div>
-              <div className="code-body">
-                <div><span className="line-no">01</span><span className="code-purple">const</span> <span className="code-blue">developer</span> = {"{"}</div>
-                <div><span className="line-no">02</span> &nbsp; focus: <span className="code-green">&quot;quality&quot;</span>,</div>
-                <div><span className="line-no">03</span> &nbsp; mindset: <span className="code-green">&quot;curious&quot;</span>,</div>
-                <div><span className="line-no">04</span> &nbsp; approach: <span className="code-green">&quot;reliable&quot;</span>,</div>
-                <div><span className="line-no">05</span> &nbsp; stack: [</div>
-                <div><span className="line-no">06</span> &nbsp; &nbsp; <span className="code-orange">&quot;React&quot;</span>, <span className="code-orange">&quot;Node.js&quot;</span>,</div>
-                <div><span className="line-no">07</span> &nbsp; &nbsp; <span className="code-orange">&quot;TypeScript&quot;</span></div>
-                <div><span className="line-no">08</span> &nbsp; ]</div>
-                <div><span className="line-no">09</span>{"}"};</div>
-                <div className="code-cursor"><span className="line-no">10</span><span className="cursor-block" /></div>
-              </div>
-              <div className="code-status"><span><i /> Ready to build</span><span>UTF-8</span></div>
-            </div>
-            <div className="float-chip chip-react"><span>⚛</span> React</div>
-            <div className="float-chip chip-ts"><span>TS</span> TypeScript</div>
-            <div className="float-chip chip-node"><span>⬡</span> Node.js</div>
-            <div className="visual-caption"><span /> Turning ideas into reliable software</div>
-          </div>
         </div>
-        <a className="scroll-cue" href="#about"><span>SCROLL TO EXPLORE</span><ArrowDown size={15} /></a>
       </header>
 
-      <section className="section about-section" id="about">
-        <div className="container about-grid">
-          <div className="about-label">
-            <span className="eyebrow">01 / A LITTLE ABOUT ME</span>
-            <div className="about-mark">DS<span>.</span></div>
+      <section className="hero" id="top">
+        <div className="hero-inner page-wrap">
+          <div className="hero-kicker"><span className="status-dot" /> SOFTWARE ENGINEER <span className="kicker-divider">/</span> CEBU, PHILIPPINES</div>
+          <div className="hero-main">
+            <div className="hero-copy">
+              <p className="hero-greeting">Hi, I&apos;m Dan.</p>
+              <h1>I make software<br />that <em>works well.</em></h1>
+              <p className="hero-summary">
+                I&apos;m a software engineer focused on building useful web
+                applications, improving existing systems, and making sure
+                things keep working after they ship.
+              </p>
+              <div className="hero-actions">
+                <a className="button button-dark" href="#work">Explore my work <ArrowDown size={15} /></a>
+                <a className="text-link" href="mailto:dsaldariega@gmail.com">Get in touch <ArrowUpRight size={15} /></a>
+              </div>
+            </div>
+            <aside className="hero-aside" aria-label="A little about Dan">
+              <div className="aside-rule" />
+              <p className="aside-label">A LITTLE CONTEXT</p>
+              <p className="aside-big">5<span>+</span></p>
+              <p className="aside-caption">years building and supporting software</p>
+              <div className="aside-bottom">
+                <span>Mostly working with</span>
+                <strong>React · TypeScript · Node.js</strong>
+              </div>
+            </aside>
           </div>
-          <div className="about-copy">
-            <SectionHeading
-              eyebrow="WHO I AM"
-              title="Engineering with purpose, from the first line to production."
-            />
-            <p className="about-lead">
-              I&apos;m a Software Engineer who enjoys building useful products and
-              making the systems behind them dependable.
-            </p>
-            <p>
-              Over the past 5+ years, I&apos;ve worked across the full software
-              development lifecycle — developing features, improving performance,
-              resolving production incidents, and supporting deployments across
-              Azure and AWS environments.
-            </p>
-            <p>
-              My background spans frontend engineering, backend development, and
-              application reliability. I care about writing maintainable code and
-              creating software that is not only useful, but also operable and
-              monitorable after it ships.
-            </p>
-            <div className="about-facts">
-              <div><strong>5+</strong><span>Years in software</span></div>
-              <div><strong>3</strong><span>Professional roles</span></div>
-              <div><strong>Full cycle</strong><span>Build · ship · support</span></div>
+          <div className="hero-foot">
+            <span><MapPin size={14} /> Liloan, Cebu</span>
+            <a href="#about">SCROLL TO KNOW MORE <ArrowDown size={13} /></a>
+          </div>
+        </div>
+      </section>
+
+      <section className="intro-section section-pad" id="about">
+        <div className="page-wrap intro-grid">
+          <SectionLabel number="01">A BIT ABOUT ME</SectionLabel>
+          <div className="intro-body">
+            <h2>I enjoy the details: a clear interface, a sensible API, and a system that&apos;s dependable in production.</h2>
+            <div className="intro-columns">
+              <p>
+                Over the past five years, I&apos;ve worked across frontend
+                development, backend services, and application support. I&apos;ve
+                built features, improved performance, worked through production
+                issues, and helped deliver changes across Azure and AWS environments.
+              </p>
+              <p>
+                I care about code that the next person can understand, software
+                that solves the actual problem, and the less glamorous work that
+                keeps an application healthy once it is in people&apos;s hands.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section skills-section" id="skills">
-        <div className="container">
-          <SectionHeading
-            eyebrow="02 / MY TOOLKIT"
-            title="Tools I use to make things work."
-            description="A practical mix of technologies and engineering practices I've used across product development and application support."
-          />
-          <div className="skills-grid">
-            {skills.map((skill, index) => {
-              const Icon = skill.icon;
-              return (
-                <article className="skill-card" key={skill.title}>
-                  <div className="skill-card-top">
-                    <span className="skill-icon"><Icon size={20} strokeWidth={1.7} /></span>
-                    <span className="skill-index">0{index + 1}</span>
-                  </div>
-                  <h3>{skill.title}</h3>
-                  <div className="skill-tags">
-                    {skill.items.map((item) => <span key={item}>{item}</span>)}
-                  </div>
-                </article>
-              );
-            })}
+      <section className="experience-section section-pad" id="work">
+        <div className="page-wrap">
+          <div className="section-heading-row">
+            <SectionLabel number="02">WHERE I&apos;VE WORKED</SectionLabel>
+            <p className="section-note">A few chapters in my professional journey.</p>
           </div>
-        </div>
-      </section>
-
-      <section className="section experience-section" id="experience">
-        <div className="container">
-          <SectionHeading
-            eyebrow="03 / THE JOURNEY"
-            title="Experience that goes beyond the code."
-            description="From building web applications to keeping business-critical workflows running, each role has added a new layer to how I approach engineering."
-          />
-          <div className="timeline">
+          <div className="experience-list">
             {experience.map((job, index) => (
-              <article className="timeline-item" key={job.company}>
-                <div className="timeline-marker"><span /></div>
-                <div className="timeline-date">
+              <article className="experience-item" key={job.company}>
+                <div className="experience-date">
                   <span>{job.dates}</span>
-                  {job.type ? <small>{job.type}</small> : null}
+                  {job.current ? <small><i /> CURRENT</small> : null}
                 </div>
-                <div className="job-card">
-                  <div className="job-heading">
+                <div className="experience-content">
+                  <div className="experience-title-row">
                     <div>
                       <h3>{job.role}</h3>
-                      <p className="company-name">{job.company} <span>·</span> {job.location}</p>
+                      <p>{job.company} <span>·</span> {job.location}</p>
                     </div>
-                    <span className="job-count">0{index + 1}</span>
+                    <span className="experience-index">0{index + 1}</span>
                   </div>
-                  <ul className="job-points">
-                    {job.points.map((point) => (
-                      <li key={point}><Check size={15} /> <span>{point}</span></li>
-                    ))}
+                  <ul>
+                    {job.points.map((point) => <li key={point}><span className="list-dash">—</span>{point}</li>)}
                   </ul>
-                  <div className="job-stack">
+                  <div className="tech-list">
                     {job.stack.map((item) => <span key={item}>{item}</span>)}
                   </div>
                 </div>
@@ -294,128 +195,109 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section projects-section" id="projects">
-        <div className="container">
-          <SectionHeading
-            eyebrow="04 / PERSONAL PROJECTS"
-            title="Things I build beyond the day job."
-            description="A look at the products and practical tools I work on independently to solve real-world problems and keep learning."
-          />
-          <article className="project-card">
-            <div className="project-visual" aria-label="DLMSF application overview">
-              <div className="project-window">
-                <div className="project-window-top">
-                  <span className="project-window-dots"><i /><i /><i /></span>
-                  <span>dlmsf · management system</span>
-                  <span className="project-window-status">IN DEVELOPMENT</span>
-                </div>
-                <div className="project-dashboard">
-                  <div className="project-dashboard-sidebar">
-                    <span className="project-sidebar-logo">DL<span>.</span></span>
-                    <i /><i /><i /><i />
-                  </div>
-                  <div className="project-dashboard-main">
-                    <span className="project-dashboard-kicker">OVERVIEW</span>
-                    <strong>Fund management</strong>
-                    <div className="project-metric-row">
-                      <div><small>CONTRIBUTIONS</small><b>Weekly</b><span>Member funds</span></div>
-                      <div><small>LOANS</small><b>Requests</b><span>Review & track</span></div>
-                    </div>
-                    <div className="project-dashboard-bars"><i /><i /><i /><i /><i /><i /><i /></div>
-                  </div>
-                </div>
+      <section className="projects-section section-pad" id="projects">
+        <div className="page-wrap">
+          <div className="section-heading-row">
+            <SectionLabel number="03">THINGS I&apos;M BUILDING</SectionLabel>
+            <p className="section-note">Personal work, experiments, and ideas made real.</p>
+          </div>
+          <article className="featured-project">
+            <div className="project-number">PROJECT / 001</div>
+            <div className="project-main">
+              <div className="project-topline">
+                <span className="project-status"><i /> IN DEVELOPMENT</span>
+                <span className="project-type">FULL-STACK WEB APPLICATION</span>
               </div>
-            </div>
-            <div className="project-content">
-              <div className="project-meta">
-                <span className="eyebrow">FEATURED PROJECT · 01</span>
-                <span className="project-status"><i /> Active development</span>
-              </div>
-              <h3>Dili Labad Members Sinking Fund Management System</h3>
-              <p className="project-subtitle">DLMSF · Full-stack web application</p>
-              <p className="project-description">
-                A web-based management system designed to help administrators and
-                members manage sinking fund contributions, loans, repayments, and
-                financial activity in one organized place.
+              <h3>Dili Labad Members<br /><em>Sinking Fund</em> Management System</h3>
+              <p className="project-acronym">DLMSF</p>
+              <p className="project-summary">
+                A shared place for administrators and members to manage weekly
+                sinking fund contributions, loan requests, repayments, and
+                financial records with more clarity and accountability.
               </p>
-              <div className="project-detail-grid">
+              <div className="project-details">
                 <div>
-                  <h4>Purpose</h4>
-                  <p>Make member fund administration clearer and more consistent by bringing weekly contributions, loan requests, repayment tracking, and audit records into a single workflow.</p>
+                  <h4>THE PURPOSE</h4>
+                  <p>Replace scattered, repetitive fund administration with a more organized process that members and administrators can follow and understand.</p>
                 </div>
                 <div>
-                  <h4>Goals</h4>
+                  <h4>WHAT IT AIMS TO DO</h4>
                   <ul>
-                    <li>Simplify member and contribution management.</li>
-                    <li>Provide a transparent loan request and approval process.</li>
-                    <li>Track repayments and keep financial actions auditable.</li>
-                    <li>Reduce repetitive admin work with bulk weekly contribution tools.</li>
+                    <li>Make member and weekly contribution records easier to manage.</li>
+                    <li>Give loan requests a clear review and approval process.</li>
+                    <li>Keep repayment activity and financial changes traceable.</li>
+                    <li>Reduce repetitive admin work through bulk contribution tools.</li>
                   </ul>
                 </div>
               </div>
-              <div className="project-highlights">
-                <span><Check size={14} /> Member & admin workflows</span>
-                <span><Check size={14} /> PHP 50/head weekly contributions</span>
-                <span><Check size={14} /> Loan & repayment tracking</span>
-                <span><Check size={14} /> Consolidated audit trail</span>
+              <div className="project-bottom">
+                <div className="project-tech">
+                  {["Next.js", "React", "TypeScript", "Express", "Supabase", "PostgreSQL"].map((item) => <span key={item}>{item}</span>)}
+                </div>
+                <a className="project-source" href="https://github.com/dsaldariega/dlmsf-app" target="_blank" rel="noreferrer">
+                  View project on GitHub <ArrowUpRight size={16} />
+                </a>
               </div>
-              <div className="project-stack">
-                {["Next.js", "React", "TypeScript", "Express", "Supabase", "PostgreSQL"].map((item) => <span key={item}>{item}</span>)}
-              </div>
-              <a className="project-link" href="https://github.com/dsaldariega/dlmsf-app" target="_blank" rel="noreferrer">
-                View source on GitHub <Github size={16} /> <ArrowUpRight size={15} />
-              </a>
+            </div>
+            <div className="project-side-note">
+              <span>BUILT TO SUPPORT</span>
+              <strong>Members<br />& administrators</strong>
+              <div className="side-note-line" />
+              <span>FOCUS AREAS</span>
+              <p>Contributions<br />Loans<br />Repayments<br />Audit trail</p>
             </div>
           </article>
         </div>
       </section>
 
-      <section className="section education-section" id="education">
-        <div className="container education-grid">
+      <section className="capabilities-section section-pad" id="skills">
+        <div className="page-wrap capabilities-grid">
           <div>
-            <SectionHeading eyebrow="05 / THE FOUNDATION" title="Always learning." />
-            <p className="education-intro">
-              A foundation in information technology, strengthened through hands-on
-              experience and continuous learning.
-            </p>
+            <SectionLabel number="04">MY TOOLKIT</SectionLabel>
+            <h2 className="capabilities-heading">Tools are just tools.<br /><em>Here&apos;s what I use.</em></h2>
           </div>
-          <article className="education-card">
-            <div className="education-icon"><GraduationCap size={23} /></div>
-            <div>
-              <span className="education-date">2015 — 2020</span>
-              <h3>Bachelor of Science in Information Technology</h3>
-              <p>Cebu Institute of Technology – University</p>
-              <span className="education-location"><MapPin size={13} /> Cebu City, Philippines</span>
-            </div>
-            <ArrowUpRight className="education-arrow" size={19} />
-          </article>
-        </div>
-      </section>
-
-      <section className="contact-section" id="contact">
-        <div className="container contact-inner">
-          <div className="contact-copy">
-            <span className="eyebrow">06 / WHAT&apos;S NEXT?</span>
-            <h2>Have something<br />good in mind<span>?</span></h2>
-            <p>I&apos;m always open to connecting with people who care about building thoughtful, reliable software.</p>
-            <a className="button button-light" href="mailto:dsaldariega@gmail.com">
-              Say hello <ArrowUpRight size={17} />
-            </a>
-          </div>
-          <div className="contact-details">
-            <a href="mailto:dsaldariega@gmail.com"><span className="contact-icon"><Mail size={18} /></span><span><small>EMAIL</small>dsaldariega@gmail.com</span><ArrowUpRight size={16} /></a>
-            <a href="https://www.linkedin.com/in/dan-christopher-saldariega-3004a61ab/" target="_blank" rel="noreferrer"><span className="contact-icon"><Linkedin size={18} /></span><span><small>LINKEDIN</small>dan-christopher-saldariega</span><ArrowUpRight size={16} /></a>
-            <a href="https://github.com/dsaldariega" target="_blank" rel="noreferrer"><span className="contact-icon"><Github size={18} /></span><span><small>GITHUB</small>github.com/dsaldariega</span><ArrowUpRight size={16} /></a>
-            <div className="contact-location"><MapPin size={16} /> Based in Liloan, Cebu, Philippines</div>
+          <div className="capability-list">
+            {capabilities.map((item) => (
+              <div className="capability-row" key={item.number}>
+                <span className="capability-number">{item.number}</span>
+                <h3>{item.title}</h3>
+                <p>{item.detail}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <footer className="footer">
-        <div className="container footer-inner">
-          <a className="wordmark footer-mark" href="#top">DS<span>.</span></a>
-          <p>Designed & built with care. © {new Date().getFullYear()} Dan Christopher Saldariega.</p>
-          <a className="back-top" href="#top">BACK TO TOP <ArrowUpRight size={14} /></a>
+      <section className="education-section section-pad">
+        <div className="page-wrap education-grid">
+          <SectionLabel number="05">THE FOUNDATION</SectionLabel>
+          <div className="education-content">
+            <span className="education-years">2015 — 2020</span>
+            <h2>Bachelor of Science in<br />Information Technology</h2>
+            <p>Cebu Institute of Technology – University</p>
+            <span className="education-location"><MapPin size={13} /> Cebu City, Philippines</span>
+          </div>
+        </div>
+      </section>
+
+      <footer className="contact-section" id="contact">
+        <div className="page-wrap contact-inner">
+          <div className="contact-main">
+            <SectionLabel number="06">YOUR TURN</SectionLabel>
+            <h2>Have a good<br />problem to <em>solve?</em></h2>
+            <p>I&apos;d be happy to hear about it. Let&apos;s connect.</p>
+            <a className="button button-light" href="mailto:dsaldariega@gmail.com">Email me <ArrowUpRight size={16} /></a>
+          </div>
+          <div className="contact-links">
+            <a href="mailto:dsaldariega@gmail.com"><Mail size={17} /><span>Email</span><strong>dsaldariega@gmail.com</strong><ArrowUpRight size={15} /></a>
+            <a href="https://www.linkedin.com/in/dan-christopher-saldariega-3004a61ab/" target="_blank" rel="noreferrer"><Linkedin size={17} /><span>LinkedIn</span><strong>Dan Christopher Saldariega</strong><ArrowUpRight size={15} /></a>
+            <a href="https://github.com/dsaldariega" target="_blank" rel="noreferrer"><Github size={17} /><span>GitHub</span><strong>github.com/dsaldariega</strong><ArrowUpRight size={15} /></a>
+          </div>
+        </div>
+        <div className="page-wrap footer-bottom">
+          <a className="brand footer-brand" href="#top">dan<span>.</span></a>
+          <p>Designed with care. Built with code.</p>
+          <a href="#top">BACK TO TOP <ArrowUpRight size={13} /></a>
         </div>
       </footer>
     </main>

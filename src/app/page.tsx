@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import {
   ArrowDown,
-  ArrowRight,
   ArrowUpRight,
   Github,
   Linkedin,

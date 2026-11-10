@@ -2,7 +2,7 @@ name: Deploy portfolio to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "portfolio/nextjs-modern-redesign"]
   workflow_dispatch:
 
 permissions:
@@ -34,6 +34,7 @@ jobs:
           path: ./out
 
   deploy:
+    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

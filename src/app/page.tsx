@@ -1,9 +1,7 @@
 import {
   ArrowDown,
   ArrowDownRight,
-  ArrowRight,
   ArrowUpRight,
-  BriefcaseBusiness,
   Check,
   Code2,
   Database,

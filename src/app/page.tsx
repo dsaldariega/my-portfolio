@@ -355,7 +355,7 @@ export default function Home() {
               </div>
               <div className="project-highlights">
                 <span><Check size={14} /> Member & admin workflows</span>
-                <span><Check size={14} /> Weekly fund contributions</span>
+                <span><Check size={14} /> PHP 50/head weekly contributions</span>
                 <span><Check size={14} /> Loan & repayment tracking</span>
                 <span><Check size={14} /> Consolidated audit trail</span>
               </div>

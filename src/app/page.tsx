@@ -1,8 +1,8 @@
+import type { ReactNode } from "react";
 import {
   ArrowDown,
   ArrowRight,
   ArrowUpRight,
-  Check,
   Github,
   Linkedin,
   Mail,
@@ -77,7 +77,7 @@ const capabilities = [
   },
 ];
 
-function SectionLabel({ number, children }: { number: string; children: React.ReactNode }) {
+function SectionLabel({ number, children }: { number: string; children: ReactNode }) {
   return (
     <div className="section-label">
       <span>{number}</span>

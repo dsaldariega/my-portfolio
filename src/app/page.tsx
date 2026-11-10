@@ -126,6 +126,7 @@ export default function Home() {
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
             <a href="#education">Education</a>
           </div>
           <a className="nav-contact" href="mailto:dsaldariega@gmail.com">
@@ -293,10 +294,86 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section projects-section" id="projects">
+        <div className="container">
+          <SectionHeading
+            eyebrow="04 / PERSONAL PROJECTS"
+            title="Things I build beyond the day job."
+            description="A look at the products and practical tools I work on independently to solve real-world problems and keep learning."
+          />
+          <article className="project-card">
+            <div className="project-visual" aria-label="DLMSF application overview">
+              <div className="project-window">
+                <div className="project-window-top">
+                  <span className="project-window-dots"><i /><i /><i /></span>
+                  <span>dlmsf · management system</span>
+                  <span className="project-window-status">IN DEVELOPMENT</span>
+                </div>
+                <div className="project-dashboard">
+                  <div className="project-dashboard-sidebar">
+                    <span className="project-sidebar-logo">DL<span>.</span></span>
+                    <i /><i /><i /><i />
+                  </div>
+                  <div className="project-dashboard-main">
+                    <span className="project-dashboard-kicker">OVERVIEW</span>
+                    <strong>Fund management</strong>
+                    <div className="project-metric-row">
+                      <div><small>CONTRIBUTIONS</small><b>Weekly</b><span>Member funds</span></div>
+                      <div><small>LOANS</small><b>Requests</b><span>Review & track</span></div>
+                    </div>
+                    <div className="project-dashboard-bars"><i /><i /><i /><i /><i /><i /><i /></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="project-content">
+              <div className="project-meta">
+                <span className="eyebrow">FEATURED PROJECT · 01</span>
+                <span className="project-status"><i /> Active development</span>
+              </div>
+              <h3>Dili Labad Members Sinking Fund Management System</h3>
+              <p className="project-subtitle">DLMSF · Full-stack web application</p>
+              <p className="project-description">
+                A web-based management system designed to help administrators and
+                members manage sinking fund contributions, loans, repayments, and
+                financial activity in one organized place.
+              </p>
+              <div className="project-detail-grid">
+                <div>
+                  <h4>Purpose</h4>
+                  <p>Make member fund administration clearer and more consistent by bringing weekly contributions, loan requests, repayment tracking, and audit records into a single workflow.</p>
+                </div>
+                <div>
+                  <h4>Goals</h4>
+                  <ul>
+                    <li>Simplify member and contribution management.</li>
+                    <li>Provide a transparent loan request and approval process.</li>
+                    <li>Track repayments and keep financial actions auditable.</li>
+                    <li>Reduce repetitive admin work with bulk weekly contribution tools.</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="project-highlights">
+                <span><Check size={14} /> Member & admin workflows</span>
+                <span><Check size={14} /> PHP 50/head weekly contributions</span>
+                <span><Check size={14} /> Loan & repayment tracking</span>
+                <span><Check size={14} /> Consolidated audit trail</span>
+              </div>
+              <div className="project-stack">
+                {["Next.js", "React", "TypeScript", "Express", "Supabase", "PostgreSQL"].map((item) => <span key={item}>{item}</span>)}
+              </div>
+              <a className="project-link" href="https://github.com/dsaldariega/dlmsf-app" target="_blank" rel="noreferrer">
+                View source on GitHub <Github size={16} /> <ArrowUpRight size={15} />
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section className="section education-section" id="education">
         <div className="container education-grid">
           <div>
-            <SectionHeading eyebrow="04 / THE FOUNDATION" title="Always learning." />
+            <SectionHeading eyebrow="05 / THE FOUNDATION" title="Always learning." />
             <p className="education-intro">
               A foundation in information technology, strengthened through hands-on
               experience and continuous learning.
@@ -318,7 +395,7 @@ export default function Home() {
       <section className="contact-section" id="contact">
         <div className="container contact-inner">
           <div className="contact-copy">
-            <span className="eyebrow">05 / WHAT&apos;S NEXT?</span>
+            <span className="eyebrow">06 / WHAT&apos;S NEXT?</span>
             <h2>Have something<br />good in mind<span>?</span></h2>
             <p>I&apos;m always open to connecting with people who care about building thoughtful, reliable software.</p>
             <a className="button button-light" href="mailto:dsaldariega@gmail.com">

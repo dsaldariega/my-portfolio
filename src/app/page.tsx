@@ -318,7 +318,7 @@ export default function Home() {
       <section className="contact-section" id="contact">
         <div className="container contact-inner">
           <div className="contact-copy">
-            <span className="eyebrow">05 / WHAT'S NEXT?</span>
+            <span className="eyebrow">05 / WHAT&apos;S NEXT?</span>
             <h2>Have something<br />good in mind<span>?</span></h2>
             <p>I&apos;m always open to connecting with people who care about building thoughtful, reliable software.</p>
             <a className="button button-light" href="mailto:dsaldariega@gmail.com">

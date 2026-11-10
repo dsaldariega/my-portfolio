@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
-  basePath: "/my-portfolio",
+  basePath: process.env.VERCEL === "1" ? undefined : "/my-portfolio",
   images: {
     unoptimized: true,
   },

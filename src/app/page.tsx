@@ -72,13 +72,13 @@ const experience = [
     dates: "Aug 2022 — Oct 2024",
     stack: ["React", "Node.js", "Express", ".NET", "Azure", "Grafana", "Jenkins"],
     points: [
-      "Built and maintained reusable React components, improving usability across devices and browsers.",
-      "Developed server-side features and REST APIs with Node.js and Express, integrating with .NET APIs.",
-      "Implemented authentication and security-related application features.",
-      "Refactored legacy code, resolved defects, and optimized backend performance.",
-      "Used Grafana for application monitoring and supported production incident response and ITIL-aligned processes.",
-      "Supported deployments, release management, automation, and security and compliance activities.",
-      "Worked with cross-functional teams and client stakeholders to deliver application changes.",
+      "Built and maintained React web application components, optimizing performance across devices and browsers.",
+      "Developed server-side features and REST APIs using Node.js and Express, and integrated with .NET APIs.",
+      "Implemented authentication and security features for client applications.",
+      "Refactored legacy code, fixed defects, and optimized backend performance.",
+      "Monitored applications with Grafana and handled incident response, investigating issues and coordinating fixes through ITIL-style incident management.",
+      "Supported deployments, release management, automation, and security and compliance processes.",
+      "Collaborated with cross-functional and client teams to maintain reliability and operational stability.",
     ],
   },
   {
@@ -91,7 +91,7 @@ const experience = [
       "Developed responsive web applications using React and TypeScript.",
       "Built backend services with Node.js, Express, and GraphQL, including supporting database design.",
       "Improved application usability and navigation to create clearer user experiences.",
-      "Prepared and maintained test plans, procedures, and results to support software quality.",
+      "Wrote and documented test plans, procedures, and results to support quality releases.",
     ],
   },
 ];
@@ -142,10 +142,12 @@ export default function Home() {
             <h2>I build thoughtful digital experiences and dependable software.</h2>
             <p className="hero-description">
               Software Engineer with 5+ years of experience building and maintaining
-              web applications, developing backend services, supporting production
-              systems, and improving business workflows. My experience spans React,
-              TypeScript, Node.js, .NET, cloud platforms, and low-code development
-              with Decisions BPM.
+              web applications with React, TypeScript, Node.js, and .NET. Experienced
+              in the full delivery cycle: developing features, improving performance,
+              resolving production incidents, and supporting deployments on Azure and
+              AWS. I combine frontend development skills with an application support
+              and reliability background, helping keep software easy to run, monitor,
+              and maintain.
             </p>
             <div className="hero-actions">
               <Button className="button button-primary" variant="contained" href="#experience" endIcon={<ArrowDownRight size={17} />}>
@@ -174,19 +176,20 @@ export default function Home() {
               title="Engineering with purpose, from the first line to production."
             />
             <p className="about-lead">
-              I&apos;m a Software Engineer with 5+ years of experience building,
-              maintaining, and supporting software that solves practical business problems.
+              I&apos;m a Software Engineer with 5+ years of experience building and
+              maintaining web applications with React, TypeScript, Node.js, and .NET.
             </p>
             <p>
-              My experience spans frontend and backend development, Site Reliability
-              Engineering, and low-code application development. I&apos;ve worked with
-              React, TypeScript, Node.js, .NET, cloud platforms, and Decisions BPM.
+              I&apos;ve worked across frontend and backend development, application
+              support, reliability, and low-code application development with Decisions
+              BPM. My technical experience also includes AWS, Azure, Jenkins, Grafana,
+              MySQL, and SQL.
             </p>
             <p>
-              Beyond building features, I&apos;ve supported deployments, monitored
-              application health, troubleshot production issues, and improved business
-              workflows. I value clear, maintainable solutions and understand that
-              good software needs to work reliably after it reaches users.
+              I&apos;ve supported deployments, monitored application health, resolved
+              production issues, and helped maintain reliable business workflows.
+              I value clear, maintainable solutions and understand that good software
+              needs to work reliably after it reaches users.
             </p>
             <div className="about-facts">
               <div><strong>5+</strong><span>Years in software</span></div>

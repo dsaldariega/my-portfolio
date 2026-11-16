@@ -76,6 +76,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .about-section { background: #fff; }
 .about-grid { display: block; }
 .about-copy { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 56px; row-gap: 0; }
+.about-section-label { grid-column: 1 / -1; display: block; margin-bottom: 10px; }
 .about-copy > .section-heading,
 .about-copy > .about-lead,
 .about-copy > .about-facts { grid-column: 1 / -1; }

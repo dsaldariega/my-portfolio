@@ -168,9 +168,8 @@ export default function Home() {
       <section className="section about-section" id="about">
         <div className="container about-grid">
           <div className="about-copy">
-            <span className="eyebrow about-section-label">01 / A LITTLE ABOUT ME</span>
             <SectionHeading
-              eyebrow="WHO I AM"
+              eyebrow="01 / A LITTLE ABOUT ME"
               title="Engineering with purpose, from the first line to production."
             />
             <p className="about-lead">

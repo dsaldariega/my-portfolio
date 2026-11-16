@@ -199,7 +199,7 @@ export default function Home() {
         <div className="container about-grid">
           <div className="about-label">
             <span className="eyebrow">01 / A LITTLE ABOUT ME</span>
-            <div className="about-mark">DS<span>.</span></div>
+            <span className="about-accent" aria-hidden="true" />
           </div>
           <div className="about-copy">
             <SectionHeading
@@ -207,20 +207,19 @@ export default function Home() {
               title="Engineering with purpose, from the first line to production."
             />
             <p className="about-lead">
-              I&apos;m a Software Engineer who enjoys building useful products and
-              making the systems behind them dependable.
+              I&apos;m a Software Engineer with 5+ years of experience building,
+              maintaining, and supporting software that solves practical business problems.
             </p>
             <p>
-              Over the past 5+ years, I&apos;ve worked across the full software
-              development lifecycle — developing features, improving performance,
-              resolving production incidents, and supporting deployments across
-              Azure and AWS environments.
+              My experience spans frontend and backend development, Site Reliability
+              Engineering, and low-code application development. I&apos;ve worked with
+              React, TypeScript, Node.js, .NET, cloud platforms, and Decisions BPM.
             </p>
             <p>
-              My background spans frontend engineering, backend development, and
-              application reliability. I care about writing maintainable code and
-              creating software that is not only useful, but also operable and
-              monitorable after it ships.
+              Beyond building features, I&apos;ve supported deployments, monitored
+              application health, troubleshot production issues, and improved business
+              workflows. I value clear, maintainable solutions and understand that
+              good software needs to work reliably after it reaches users.
             </p>
             <div className="about-facts">
               <div><strong>5+</strong><span>Years in software</span></div>

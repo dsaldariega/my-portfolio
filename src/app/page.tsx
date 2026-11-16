@@ -374,23 +374,27 @@ export default function Home() {
         </div>
       </section>
 
-          <article className="project-card project-card-secondary">
-            <div className="project-visual budgetnest-visual" aria-label="BudgetNest application overview">
-              <div className="project-window budgetnest-window">
+          <article className="project-card">
+            <div className="project-visual" aria-label="BudgetNest application overview">
+              <div className="project-window">
                 <div className="project-window-top">
                   <span className="project-window-dots"><i /><i /><i /></span>
                   <span>budgetnest · personal finance</span>
-                  <span className="project-window-status">LIVE</span>
+                  <span className="project-window-status">LIVE APP</span>
                 </div>
-                <div className="budgetnest-preview">
-                  <div className="budgetnest-preview-header">
-                    <span className="project-dashboard-kicker">PERSONAL FINANCE</span>
-                    <strong>BudgetNest</strong>
+                <div className="project-dashboard">
+                  <div className="project-dashboard-sidebar">
+                    <span className="project-sidebar-logo">BN<span>.</span></span>
+                    <i /><i /><i /><i />
                   </div>
-                  <div className="budgetnest-preview-cards">
-                    <div><small>MONTHLY BUDGET</small><b>Plan</b><span>Track spending</span></div>
-                    <div><small>GOALS</small><b>Save</b><span>Stay on target</span></div>
-                    <div><small>ACTIVITY</small><b>Organize</b><span>Know your money</span></div>
+                  <div className="project-dashboard-main">
+                    <span className="project-dashboard-kicker">OVERVIEW</span>
+                    <strong>Personal finance</strong>
+                    <div className="project-metric-row">
+                      <div><small>BUDGETS</small><b>Plan</b><span>Track spending</span></div>
+                      <div><small>GOALS</small><b>Save</b><span>Stay on target</span></div>
+                    </div>
+                    <div className="project-dashboard-bars"><i /><i /><i /><i /><i /><i /><i /></div>
                   </div>
                 </div>
               </div>
@@ -398,7 +402,7 @@ export default function Home() {
             <div className="project-content">
               <div className="project-meta">
                 <span className="eyebrow">PERSONAL PROJECT · 02</span>
-                <Chip className="project-status-chip" label="Live app" size="small" />
+                <span className="project-status"><i /> Live application</span>
               </div>
               <h3>BudgetNest</h3>
               <p className="project-subtitle">Personal finance web application</p>
@@ -420,30 +424,24 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
+              <div className="project-highlights">
+                <span><Check size={14} /> Budget & expense tracking</span>
+                <span><Check size={14} /> Savings goal management</span>
+                <span><Check size={14} /> Accounts & transactions</span>
+                <span><Check size={14} /> Personal finance workspace</span>
+              </div>
               <Stack className="project-stack" direction="row" flexWrap="wrap" gap={1}>
                 {["Next.js", "React", "TypeScript", "Node.js", "Supabase"].map((item) => (
                   <Chip key={item} label={item} size="small" />
                 ))}
               </Stack>
               <div className="project-links">
-                <Button
-                  variant="outlined"
-                  size="small"
-                  href="https://github.com/dsaldariega/personalized-budget-tracker"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Source code <Github size={15} />
-                </Button>
-                <Button
-                  variant="contained"
-                  size="small"
-                  href="https://budgetnest-app.vercel.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Open live app <ArrowUpRight size={15} />
-                </Button>
+                <a className="project-link" href="https://github.com/dsaldariega/personalized-budget-tracker" target="_blank" rel="noreferrer">
+                  View source on GitHub <Github size={16} /> <ArrowUpRight size={15} />
+                </a>
+                <a className="project-link" href="https://budgetnest-app.vercel.com" target="_blank" rel="noreferrer">
+                  Open live app <ArrowUpRight size={16} />
+                </a>
               </div>
             </div>
           </article>

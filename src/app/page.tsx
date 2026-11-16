@@ -1,3 +1,5 @@
+import { Button, Chip, Stack } from "@mui/material";
+
 import {
   ArrowDown,
   ArrowDownRight,
@@ -129,8 +131,8 @@ export default function Home() {
             <a href="#projects">Projects</a>
             <a href="#education">Education</a>
           </div>
-          <a className="nav-contact" href="mailto:dsaldariega@gmail.com">
-            Let&apos;s talk <ArrowUpRight size={15} />
+          <a className="nav-contact" href="#contact">
+            Contact <ArrowUpRight size={15} />
           </a>
         </nav>
 
@@ -146,12 +148,12 @@ export default function Home() {
               backend services and production support.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#experience">
-                Explore my work <ArrowDownRight size={17} />
-              </a>
-              <a className="button button-ghost" href="mailto:dsaldariega@gmail.com">
-                Get in touch <ArrowUpRight size={16} />
-              </a>
+              <Button className="button button-primary" variant="contained" href="#experience" endIcon={<ArrowDownRight size={17} />}>
+                Explore my work
+              </Button>
+              <Button className="button button-ghost" variant="outlined" href="mailto:dsaldariega@gmail.com" endIcon={<ArrowUpRight size={16} />}>
+                Get in touch
+              </Button>
             </div>
             <div className="hero-meta">
               <span><MapPin size={14} /> Liloan, Cebu, Philippines</span>
@@ -197,7 +199,7 @@ export default function Home() {
         <div className="container about-grid">
           <div className="about-label">
             <span className="eyebrow">01 / A LITTLE ABOUT ME</span>
-            <div className="about-mark">DS<span>.</span></div>
+            <span className="about-accent" aria-hidden="true" />
           </div>
           <div className="about-copy">
             <SectionHeading
@@ -205,20 +207,19 @@ export default function Home() {
               title="Engineering with purpose, from the first line to production."
             />
             <p className="about-lead">
-              I&apos;m a Software Engineer who enjoys building useful products and
-              making the systems behind them dependable.
+              I&apos;m a Software Engineer with 5+ years of experience building,
+              maintaining, and supporting software that solves practical business problems.
             </p>
             <p>
-              Over the past 5+ years, I&apos;ve worked across the full software
-              development lifecycle — developing features, improving performance,
-              resolving production incidents, and supporting deployments across
-              Azure and AWS environments.
+              My experience spans frontend and backend development, Site Reliability
+              Engineering, and low-code application development. I&apos;ve worked with
+              React, TypeScript, Node.js, .NET, cloud platforms, and Decisions BPM.
             </p>
             <p>
-              My background spans frontend engineering, backend development, and
-              application reliability. I care about writing maintainable code and
-              creating software that is not only useful, but also operable and
-              monitorable after it ships.
+              Beyond building features, I&apos;ve supported deployments, monitored
+              application health, troubleshot production issues, and improved business
+              workflows. I value clear, maintainable solutions and understand that
+              good software needs to work reliably after it reaches users.
             </p>
             <div className="about-facts">
               <div><strong>5+</strong><span>Years in software</span></div>
@@ -299,74 +300,87 @@ export default function Home() {
           <SectionHeading
             eyebrow="04 / PERSONAL PROJECTS"
             title="Things I build beyond the day job."
-            description="A look at the products and practical tools I work on independently to solve real-world problems and keep learning."
+            description="Independent projects shaped around practical problems, thoughtful product decisions, and continuous learning."
           />
-          <article className="project-card">
-            <div className="project-visual" aria-label="DLMSF application overview">
-              <div className="project-window">
-                <div className="project-window-top">
-                  <span className="project-window-dots"><i /><i /><i /></span>
-                  <span>dlmsf · management system</span>
-                  <span className="project-window-status">IN DEVELOPMENT</span>
+          <div className="projects-grid">
+            <article className="project-card">
+              <div className="project-content">
+                <div className="project-meta">
+                  <span className="eyebrow">PERSONAL PROJECT · 01</span>
+                  <span className="project-status"><i /> In development</span>
                 </div>
-                <div className="project-dashboard">
-                  <div className="project-dashboard-sidebar">
-                    <span className="project-sidebar-logo">DL<span>.</span></span>
-                    <i /><i /><i /><i />
+                <h3>Dili Labad Members Sinking Fund Management System</h3>
+                <p className="project-subtitle">DLMSF · Full-stack web application</p>
+                <p className="project-description">
+                  A management system designed to help administrators and members organize sinking fund contributions, loans, repayments, and financial activity.
+                </p>
+                <div className="project-detail-grid">
+                  <div>
+                    <h4>Purpose</h4>
+                    <p>Make member fund administration clearer and more consistent by bringing weekly contributions, loan requests, repayment tracking, and audit records into one workflow.</p>
                   </div>
-                  <div className="project-dashboard-main">
-                    <span className="project-dashboard-kicker">OVERVIEW</span>
-                    <strong>Fund management</strong>
-                    <div className="project-metric-row">
-                      <div><small>CONTRIBUTIONS</small><b>Weekly</b><span>Member funds</span></div>
-                      <div><small>LOANS</small><b>Requests</b><span>Review & track</span></div>
-                    </div>
-                    <div className="project-dashboard-bars"><i /><i /><i /><i /><i /><i /><i /></div>
+                  <div>
+                    <h4>Project goals</h4>
+                    <ul>
+                      <li>Simplify member and contribution management.</li>
+                      <li>Provide a clear loan request and approval process.</li>
+                      <li>Track repayments and keep financial actions auditable.</li>
+                      <li>Reduce repetitive admin work through bulk contribution tools.</li>
+                    </ul>
                   </div>
                 </div>
+                <Stack className="project-stack" direction="row" flexWrap="wrap" gap={1}>
+                  {["Next.js", "React", "TypeScript", "Express", "Supabase", "PostgreSQL"].map((item) => (
+                    <Chip key={item} label={item} size="small" />
+                  ))}
+                </Stack>
+                <a className="project-link" href="https://github.com/dsaldariega/dlmsf-app" target="_blank" rel="noreferrer">
+                  View source on GitHub <Github size={16} /> <ArrowUpRight size={15} />
+                </a>
               </div>
-            </div>
-            <div className="project-content">
-              <div className="project-meta">
-                <span className="eyebrow">FEATURED PROJECT · 01</span>
-                <span className="project-status"><i /> Active development</span>
-              </div>
-              <h3>Dili Labad Members Sinking Fund Management System</h3>
-              <p className="project-subtitle">DLMSF · Full-stack web application</p>
-              <p className="project-description">
-                A web-based management system designed to help administrators and
-                members manage sinking fund contributions, loans, repayments, and
-                financial activity in one organized place.
-              </p>
-              <div className="project-detail-grid">
-                <div>
-                  <h4>Purpose</h4>
-                  <p>Make member fund administration clearer and more consistent by bringing weekly contributions, loan requests, repayment tracking, and audit records into a single workflow.</p>
+            </article>
+
+            <article className="project-card">
+              <div className="project-content">
+                <div className="project-meta">
+                  <span className="eyebrow">PERSONAL PROJECT · 02</span>
+                  <span className="project-status"><i /> Live application</span>
                 </div>
-                <div>
-                  <h4>Goals</h4>
-                  <ul>
-                    <li>Simplify member and contribution management.</li>
-                    <li>Provide a transparent loan request and approval process.</li>
-                    <li>Track repayments and keep financial actions auditable.</li>
-                    <li>Reduce repetitive admin work with bulk weekly contribution tools.</li>
-                  </ul>
+                <h3>BudgetNest</h3>
+                <p className="project-subtitle">Personal finance web application</p>
+                <p className="project-description">
+                  A personal finance workspace built to make everyday money management easier to organize, understand, and keep up with.
+                </p>
+                <div className="project-detail-grid">
+                  <div>
+                    <h4>Purpose</h4>
+                    <p>Bring budgets, accounts, transactions, savings goals, loans, subscriptions, and financial activity together in one focused workspace.</p>
+                  </div>
+                  <div>
+                    <h4>Project goals</h4>
+                    <ul>
+                      <li>Make budgets and everyday spending easier to follow.</li>
+                      <li>Keep accounts and transactions organized.</li>
+                      <li>Support savings goals and recurring financial commitments.</li>
+                    </ul>
+                  </div>
+                </div>
+                <Stack className="project-stack" direction="row" flexWrap="wrap" gap={1}>
+                  {["Next.js", "React", "TypeScript", "Node.js", "Supabase"].map((item) => (
+                    <Chip key={item} label={item} size="small" />
+                  ))}
+                </Stack>
+                <div className="project-links">
+                  <a className="project-link" href="https://github.com/dsaldariega/personalized-budget-tracker" target="_blank" rel="noreferrer">
+                    View source <Github size={16} /> <ArrowUpRight size={15} />
+                  </a>
+                  <a className="project-link" href="https://budgetnest-app.vercel.com" target="_blank" rel="noreferrer">
+                    Open live app <ArrowUpRight size={16} />
+                  </a>
                 </div>
               </div>
-              <div className="project-highlights">
-                <span><Check size={14} /> Member & admin workflows</span>
-                <span><Check size={14} /> PHP 50/head weekly contributions</span>
-                <span><Check size={14} /> Loan & repayment tracking</span>
-                <span><Check size={14} /> Consolidated audit trail</span>
-              </div>
-              <div className="project-stack">
-                {["Next.js", "React", "TypeScript", "Express", "Supabase", "PostgreSQL"].map((item) => <span key={item}>{item}</span>)}
-              </div>
-              <a className="project-link" href="https://github.com/dsaldariega/dlmsf-app" target="_blank" rel="noreferrer">
-                View source on GitHub <Github size={16} /> <ArrowUpRight size={15} />
-              </a>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -398,12 +412,9 @@ export default function Home() {
             <span className="eyebrow">06 / WHAT&apos;S NEXT?</span>
             <h2>Have something<br />good in mind<span>?</span></h2>
             <p>I&apos;m always open to connecting with people who care about building thoughtful, reliable software.</p>
-            <a className="button button-light" href="mailto:dsaldariega@gmail.com">
-              Say hello <ArrowUpRight size={17} />
-            </a>
           </div>
           <div className="contact-details">
-            <a href="mailto:dsaldariega@gmail.com"><span className="contact-icon"><Mail size={18} /></span><span><small>EMAIL</small>dsaldariega@gmail.com</span><ArrowUpRight size={16} /></a>
+            <a href="mailto:dsaldariega@gmail.com"><span className="contact-icon"><Mail size={18} /></span><span><small>EMAIL</small>dsaldariega@gmail.com</span><span className="email-action">Email me <ArrowUpRight size={14} /></span></a>
             <a href="https://www.linkedin.com/in/dan-christopher-saldariega-3004a61ab/" target="_blank" rel="noreferrer"><span className="contact-icon"><Linkedin size={18} /></span><span><small>LINKEDIN</small>dan-christopher-saldariega</span><ArrowUpRight size={16} /></a>
             <a href="https://github.com/dsaldariega" target="_blank" rel="noreferrer"><span className="contact-icon"><Github size={18} /></span><span><small>GITHUB</small>github.com/dsaldariega</span><ArrowUpRight size={16} /></a>
             <div className="contact-location"><MapPin size={16} /> Based in Liloan, Cebu, Philippines</div>

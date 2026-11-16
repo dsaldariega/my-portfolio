@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ThemeProviderWrapper from "./theme-provider";
 
 export const metadata: Metadata = {
   title: "Dan Christopher Saldariega | Software Engineer",
@@ -23,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body><ThemeProviderWrapper>{children}</ThemeProviderWrapper></body>
     </html>
   );
 }

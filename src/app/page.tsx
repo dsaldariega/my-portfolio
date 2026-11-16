@@ -303,6 +303,7 @@ export default function Home() {
             title="Things I build beyond the day job."
             description="A look at the products and practical tools I work on independently to solve real-world problems and keep learning."
           />
+
           <article className="project-card">
             <div className="project-visual" aria-label="DLMSF application overview">
               <div className="project-window">
@@ -370,10 +371,6 @@ export default function Home() {
                 View source on GitHub <Github size={16} /> <ArrowUpRight size={15} />
               </a>
             </div>
-          </article>
-        </div>
-      </section>
-
           </article>
 
           <article className="project-card">
@@ -447,7 +444,7 @@ export default function Home() {
               </div>
             </div>
           </article>
-
+        </div>
       </section>
 
       <section className="section education-section" id="education">

@@ -134,6 +134,15 @@ export default function Home() {
             Contact
           </a>
         </nav>
+        <nav className="mobile-nav" aria-label="Mobile navigation">
+          <div className="mobile-nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+          </div>
+        </nav>
 
         <div className="hero-content container">
           <div className="hero-copy">

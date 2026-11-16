@@ -76,8 +76,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .about-section { background: #fff; }
 .about-grid { display: grid; grid-template-columns: .7fr 1.3fr; gap: 80px; }
 .about-label { padding-top: 12px; }
-.about-mark { margin-top: 80px; color: #e8ede8; font: 800 94px/.9 var(--display); letter-spacing: -10px; }
-.about-mark span { color: #c9e7a6; }
+.about-accent { display: block; width: 46px; height: 4px; margin-top: 34px; border-radius: 99px; background: var(--green-dark); }
 .section-heading { max-width: 690px; }
 .section-heading .eyebrow { color: #a94c56; }
 .section-heading h2 { margin: 15px 0 0; color: var(--ink); font: 800 clamp(30px, 3.5vw, 43px)/1.17 var(--display); letter-spacing: -1.9px; }

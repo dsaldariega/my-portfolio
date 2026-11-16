@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Roboto:wght@400;500;600;700&display=swap');
 
 :root {
   --ink: #18221f;
@@ -254,4 +254,102 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
+
+
+/* MUI-aligned typography and 1440p readability */
+body { font-size: 15px; }
+.nav-links a, .nav-contact { font-size: 13px; }
+.hero-description { font-size: 15px; line-height: 1.85; }
+.hero-meta { font-size: 11px; }
+.section-heading > p { font-size: 15px; }
+.about-lead { font-size: 20px; }
+.about-copy > p:not(.about-lead) { font-size: 15px; }
+.about-facts span { font-size: 11px; }
+.skill-card h3 { font-size: 17px; }
+.skill-tags span, .job-stack span { font-size: 11px; }
+.job-heading h3 { font-size: 21px; }
+.company-name { font-size: 13px; }
+.job-points li { font-size: 14px; }
+.timeline-date { font-size: 12px; }
+.project-description { font-size: 14px; }
+.project-detail-grid p, .project-detail-grid ul { font-size: 13px; }
+.project-highlights span { font-size: 12px; }
+.project-link { font-size: 13px; }
+.education-intro { font-size: 15px; }
+.education-card h3 { font-size: 20px; }
+.education-card p { font-size: 14px; }
+.contact-copy p { font-size: 15px; }
+.contact-details > a > span:nth-child(2) { font-size: 13px; }
+
+.project-stack .MuiChip-root {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 5px;
+  color: #53664f;
+  background: #f1f6ed;
+  border: 1px solid #e2ebdd;
+}
+.project-status-chip {
+  color: #5e774e !important;
+  background: #eef5e8 !important;
+}
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+.project-links .MuiButton-root {
+  min-height: 40px;
+  border-radius: 5px;
+  text-transform: none;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: none;
+}
+.project-links .MuiButton-outlined {
+  color: #456c36;
+  border-color: #bfd1b7;
+}
+.project-links .MuiButton-contained {
+  color: #17241e;
+  background: var(--green);
+}
+.project-links .MuiButton-contained:hover { background: #a9e45d; }
+.button.MuiButton-root {
+  min-height: 46px;
+  padding: 0 19px;
+  border-radius: 5px;
+  text-transform: none;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.button-primary.MuiButton-root { color: #17241e; background: var(--green); box-shadow: none; }
+.button-primary.MuiButton-root:hover { background: #a9e45d; box-shadow: none; }
+.button-ghost.MuiButton-root { color: #f1f6f2; border-color: rgba(255,255,255,.25); }
+.button-ghost.MuiButton-root:hover { border-color: rgba(255,255,255,.5); background: rgba(255,255,255,.06); }
+.project-card-secondary { margin-top: 22px; }
+.budgetnest-visual { background: radial-gradient(ellipse at 50% 45%, rgba(185,243,106,.16), transparent 58%), #202a24; }
+.budgetnest-window { transform: rotate(1.5deg); }
+.budgetnest-preview { min-height: 250px; padding: 24px; background: #f8faf7; }
+.budgetnest-preview-header { display: flex; flex-direction: column; gap: 7px; }
+.budgetnest-preview-header strong { color: #26352b; font: 700 22px var(--display); }
+.budgetnest-preview-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin-top: 22px; }
+.budgetnest-preview-cards > div { display: flex; flex-direction: column; gap: 6px; min-height: 94px; padding: 12px; border: 1px solid #e7ede4; border-radius: 5px; background: #fff; }
+.budgetnest-preview-cards small { color: #8a968b; font: 7px var(--mono); }
+.budgetnest-preview-cards b { color: #334a35; font: 700 14px var(--display); }
+.budgetnest-preview-cards span { color: #8b968d; font-size: 9px; }
+@media (max-width: 650px) {
+  body { font-size: 14px; }
+  .section-heading > p { font-size: 14px; }
+  .about-lead { font-size: 18px; }
+  .about-copy > p:not(.about-lead) { font-size: 14px; }
+  .job-points li { font-size: 13px; }
+  .project-description { font-size: 13px; }
+  .budgetnest-preview-cards { grid-template-columns: 1fr; }
 }

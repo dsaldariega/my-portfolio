@@ -131,8 +131,8 @@ export default function Home() {
             <a href="#projects">Projects</a>
             <a href="#education">Education</a>
           </div>
-          <a className="nav-contact" href="mailto:dsaldariega@gmail.com">
-            Let&apos;s talk <ArrowUpRight size={15} />
+          <a className="nav-contact" href="#contact">
+            Contact <ArrowUpRight size={15} />
           </a>
         </nav>
 
@@ -413,9 +413,6 @@ export default function Home() {
             <span className="eyebrow">06 / WHAT&apos;S NEXT?</span>
             <h2>Have something<br />good in mind<span>?</span></h2>
             <p>I&apos;m always open to connecting with people who care about building thoughtful, reliable software.</p>
-            <a className="button button-light" href="mailto:dsaldariega@gmail.com">
-              Say hello <ArrowUpRight size={17} />
-            </a>
           </div>
           <div className="contact-details">
             <a href="mailto:dsaldariega@gmail.com"><span className="contact-icon"><Mail size={18} /></span><span><small>EMAIL</small>dsaldariega@gmail.com</span><span className="email-action">Email me <ArrowUpRight size={14} /></span></a>

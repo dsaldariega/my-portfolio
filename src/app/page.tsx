@@ -1,3 +1,5 @@
+import { Button, Chip, Stack } from "@mui/material";
+
 import {
   ArrowDown,
   ArrowDownRight,
@@ -146,12 +148,12 @@ export default function Home() {
               backend services and production support.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#experience">
-                Explore my work <ArrowDownRight size={17} />
-              </a>
-              <a className="button button-ghost" href="mailto:dsaldariega@gmail.com">
-                Get in touch <ArrowUpRight size={16} />
-              </a>
+              <Button className="button button-primary" variant="contained" href="#experience" endIcon={<ArrowDownRight size={17} />}>
+                Explore my work
+              </Button>
+              <Button className="button button-ghost" variant="outlined" href="mailto:dsaldariega@gmail.com" endIcon={<ArrowUpRight size={16} />}>
+                Get in touch
+              </Button>
             </div>
             <div className="hero-meta">
               <span><MapPin size={14} /> Liloan, Cebu, Philippines</span>
@@ -359,9 +361,11 @@ export default function Home() {
                 <span><Check size={14} /> Loan & repayment tracking</span>
                 <span><Check size={14} /> Consolidated audit trail</span>
               </div>
-              <div className="project-stack">
-                {["Next.js", "React", "TypeScript", "Express", "Supabase", "PostgreSQL"].map((item) => <span key={item}>{item}</span>)}
-              </div>
+              <Stack className="project-stack" direction="row" flexWrap="wrap" gap={1}>
+                {["Next.js", "React", "TypeScript", "Express", "Supabase", "PostgreSQL"].map((item) => (
+                  <Chip key={item} label={item} size="small" />
+                ))}
+              </Stack>
               <a className="project-link" href="https://github.com/dsaldariega/dlmsf-app" target="_blank" rel="noreferrer">
                 View source on GitHub <Github size={16} /> <ArrowUpRight size={15} />
               </a>
@@ -369,6 +373,80 @@ export default function Home() {
           </article>
         </div>
       </section>
+
+          <article className="project-card project-card-secondary">
+            <div className="project-visual budgetnest-visual" aria-label="BudgetNest application overview">
+              <div className="project-window budgetnest-window">
+                <div className="project-window-top">
+                  <span className="project-window-dots"><i /><i /><i /></span>
+                  <span>budgetnest · personal finance</span>
+                  <span className="project-window-status">LIVE</span>
+                </div>
+                <div className="budgetnest-preview">
+                  <div className="budgetnest-preview-header">
+                    <span className="project-dashboard-kicker">PERSONAL FINANCE</span>
+                    <strong>BudgetNest</strong>
+                  </div>
+                  <div className="budgetnest-preview-cards">
+                    <div><small>MONTHLY BUDGET</small><b>Plan</b><span>Track spending</span></div>
+                    <div><small>GOALS</small><b>Save</b><span>Stay on target</span></div>
+                    <div><small>ACTIVITY</small><b>Organize</b><span>Know your money</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="project-content">
+              <div className="project-meta">
+                <span className="eyebrow">PERSONAL PROJECT · 02</span>
+                <Chip className="project-status-chip" label="Live app" size="small" />
+              </div>
+              <h3>BudgetNest</h3>
+              <p className="project-subtitle">Personal finance web application</p>
+              <p className="project-description">
+                A personal finance workspace built to make everyday money management
+                easier to organize, understand, and keep up with.
+              </p>
+              <div className="project-detail-grid">
+                <div>
+                  <h4>Purpose</h4>
+                  <p>Bring budgets, accounts, transactions, savings goals, loans, subscriptions, and financial activity together in one focused workspace.</p>
+                </div>
+                <div>
+                  <h4>What it demonstrates</h4>
+                  <ul>
+                    <li>Responsive React and Next.js application development.</li>
+                    <li>Practical product and UX decisions around personal finance.</li>
+                    <li>Application structure designed for continued feature growth.</li>
+                  </ul>
+                </div>
+              </div>
+              <Stack className="project-stack" direction="row" flexWrap="wrap" gap={1}>
+                {["Next.js", "React", "TypeScript", "Node.js", "Supabase"].map((item) => (
+                  <Chip key={item} label={item} size="small" />
+                ))}
+              </Stack>
+              <div className="project-links">
+                <Button
+                  variant="outlined"
+                  size="small"
+                  href="https://github.com/dsaldariega/personalized-budget-tracker"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Source code <Github size={15} />
+                </Button>
+                <Button
+                  variant="contained"
+                  size="small"
+                  href="https://budgetnest-app.vercel.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open live app <ArrowUpRight size={15} />
+                </Button>
+              </div>
+            </div>
+          </article>
 
       <section className="section education-section" id="education">
         <div className="container education-grid">

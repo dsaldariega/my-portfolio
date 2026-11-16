@@ -216,7 +216,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 @media (max-width: 900px) {
   .nav-links { display: none; }
-  .nav-contact { margin-left: auto; }
+  .nav-contact { display: none; }
   .mobile-nav {
     display: block;
     width: 100%;

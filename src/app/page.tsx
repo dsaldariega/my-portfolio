@@ -11,7 +11,6 @@ import {
   GraduationCap,
   Linkedin,
   Mail,
-  MapPin,
   Monitor,
   Server,
   ShieldCheck,
@@ -155,11 +154,6 @@ export default function Home() {
               <Button className="button button-ghost" variant="outlined" href="mailto:dsaldariega@gmail.com" endIcon={<ArrowUpRight size={16} />}>
                 Get in touch
               </Button>
-            </div>
-            <div className="hero-meta">
-              <span><MapPin size={14} /> Liloan, Cebu, Philippines</span>
-              <span className="meta-divider" />
-              <span>React · TypeScript · Node.js</span>
             </div>
           </div>
 

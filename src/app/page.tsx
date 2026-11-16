@@ -11,6 +11,7 @@ import {
   GraduationCap,
   Linkedin,
   Mail,
+  MapPin,
   Monitor,
   Server,
   ShieldCheck,

@@ -298,27 +298,16 @@ body { font-size: 15px; }
 .project-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 24px;
   margin-top: 24px;
+  align-items: center;
 }
-.project-links .MuiButton-root {
-  min-height: 40px;
-  border-radius: 5px;
-  text-transform: none;
-  font-family: var(--sans);
-  font-size: 13px;
-  font-weight: 600;
-  box-shadow: none;
+.project-links .project-link {
+  margin-top: 0;
 }
-.project-links .MuiButton-outlined {
-  color: #456c36;
-  border-color: #bfd1b7;
+.project-links .project-link + .project-link {
+  margin-left: 0;
 }
-.project-links .MuiButton-contained {
-  color: #17241e;
-  background: var(--green);
-}
-.project-links .MuiButton-contained:hover { background: #a9e45d; }
 .button.MuiButton-root {
   min-height: 46px;
   padding: 0 19px;

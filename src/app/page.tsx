@@ -131,7 +131,7 @@ export default function Home() {
             <a href="#education">Education</a>
           </div>
           <a className="nav-contact" href="#contact">
-            Contact <ArrowUpRight size={15} />
+            Contact
           </a>
         </nav>
 

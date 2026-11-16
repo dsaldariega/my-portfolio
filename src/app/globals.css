@@ -397,3 +397,22 @@ body { font-size: 15px; }
   .projects-grid .project-detail-grid { grid-template-columns: 1fr; }
   .email-action { padding: 8px 10px; font-size: 11px; }
 }
+
+
+/* Full-width introduction hero: prioritize the introduction over decoration */
+.hero-content {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 610px;
+}
+.hero-copy {
+  width: 100%;
+  max-width: 900px;
+}
+.hero-description {
+  max-width: 760px;
+}
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -5,7 +5,6 @@ import {
   ArrowDownRight,
   ArrowUpRight,
   Check,
-  Code2,
   Database,
   Github,
   Globe2,
@@ -144,8 +143,10 @@ export default function Home() {
             <h2>I build thoughtful digital experiences and dependable software.</h2>
             <p className="hero-description">
               Software Engineer with 5+ years of experience building and maintaining
-              web applications — from polished frontend interfaces to reliable
-              backend services and production support.
+              web applications, developing backend services, supporting production
+              systems, and improving business workflows. My experience spans React,
+              TypeScript, Node.js, .NET, cloud platforms, and low-code development
+              with Decisions BPM.
             </p>
             <div className="hero-actions">
               <Button className="button button-primary" variant="contained" href="#experience" endIcon={<ArrowDownRight size={17} />}>
@@ -162,35 +163,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-visual" aria-label="Software engineering illustration">
-            <div className="visual-orbit orbit-one" />
-            <div className="visual-orbit orbit-two" />
-            <div className="visual-glow" />
-            <div className="code-card">
-              <div className="code-top">
-                <div className="window-dots"><i /><i /><i /></div>
-                <span>building-things.ts</span>
-                <Code2 size={15} />
-              </div>
-              <div className="code-body">
-                <div><span className="line-no">01</span><span className="code-purple">const</span> <span className="code-blue">developer</span> = {"{"}</div>
-                <div><span className="line-no">02</span> &nbsp; focus: <span className="code-green">&quot;quality&quot;</span>,</div>
-                <div><span className="line-no">03</span> &nbsp; mindset: <span className="code-green">&quot;curious&quot;</span>,</div>
-                <div><span className="line-no">04</span> &nbsp; approach: <span className="code-green">&quot;reliable&quot;</span>,</div>
-                <div><span className="line-no">05</span> &nbsp; stack: [</div>
-                <div><span className="line-no">06</span> &nbsp; &nbsp; <span className="code-orange">&quot;React&quot;</span>, <span className="code-orange">&quot;Node.js&quot;</span>,</div>
-                <div><span className="line-no">07</span> &nbsp; &nbsp; <span className="code-orange">&quot;TypeScript&quot;</span></div>
-                <div><span className="line-no">08</span> &nbsp; ]</div>
-                <div><span className="line-no">09</span>{"}"};</div>
-                <div className="code-cursor"><span className="line-no">10</span><span className="cursor-block" /></div>
-              </div>
-              <div className="code-status"><span><i /> Ready to build</span><span>UTF-8</span></div>
-            </div>
-            <div className="float-chip chip-react"><span>⚛</span> React</div>
-            <div className="float-chip chip-ts"><span>TS</span> TypeScript</div>
-            <div className="float-chip chip-node"><span>⬡</span> Node.js</div>
-            <div className="visual-caption"><span /> Turning ideas into reliable software</div>
-          </div>
+
         </div>
         <a className="scroll-cue" href="#about"><span>SCROLL TO EXPLORE</span><ArrowDown size={15} /></a>
       </header>

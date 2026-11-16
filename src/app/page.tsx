@@ -131,8 +131,18 @@ export default function Home() {
             <a href="#education">Education</a>
           </div>
           <a className="nav-contact" href="#contact">
-            Contact <ArrowUpRight size={15} />
+            Contact
           </a>
+        </nav>
+        <nav className="mobile-nav" aria-label="Mobile navigation">
+          <div className="mobile-nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+          </div>
         </nav>
 
         <div className="hero-content container">

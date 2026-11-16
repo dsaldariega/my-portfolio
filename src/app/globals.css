@@ -212,11 +212,46 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .education-grid { gap: 35px; }
   .contact-inner { gap: 45px; }
 }
+.mobile-nav { display: none; }
+
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .nav-contact { display: none; }
+  .mobile-nav {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    background: rgba(17,27,24,.96);
+  }
+  .mobile-nav-links {
+    width: min(100% - 40px, 540px);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    overflow-x: auto;
+    padding: 13px 0 14px;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .mobile-nav-links::-webkit-scrollbar { display: none; }
+  .mobile-nav-links a {
+    flex: 0 0 auto;
+    color: #b9c4be;
+    font-size: 12px;
+    font-weight: 600;
+    transition: color .2s ease;
+  }
+  .mobile-nav-links a:hover { color: var(--green); }
+}
+
 @media (max-width: 650px) {
   .container { width: min(100% - 40px, 540px); }
-  .nav { height: 72px; }
-  .nav-links { display: none; }
-  .nav-contact { margin-left: auto; }
+  .nav {
+    height: 72px;
+    display: flex;
+  }
   .hero-content { padding-top: 64px; padding-bottom: 35px; }
   .hero h1 { font-size: clamp(42px, 11vw, 59px); letter-spacing: -2.8px; }
   .hero-copy h2 { font-size: 17px; }

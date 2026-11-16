@@ -374,6 +374,8 @@ export default function Home() {
         </div>
       </section>
 
+          </article>
+
           <article className="project-card">
             <div className="project-visual" aria-label="BudgetNest application overview">
               <div className="project-window">
@@ -445,6 +447,8 @@ export default function Home() {
               </div>
             </div>
           </article>
+
+      </section>
 
       <section className="section education-section" id="education">
         <div className="container education-grid">

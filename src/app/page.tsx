@@ -22,7 +22,15 @@ const skills = [
   {
     icon: Monitor,
     title: "Frontend",
-    items: ["React", "Redux", "TypeScript", "JavaScript ES6+", "HTML5", "CSS3", "Responsive Design"],
+    items: [
+      "React",
+      "Redux",
+      "TypeScript",
+      "JavaScript ES6+",
+      "HTML5",
+      "CSS3",
+      "Responsive Design",
+    ],
   },
   {
     icon: Server,
@@ -42,7 +50,13 @@ const skills = [
   {
     icon: ShieldCheck,
     title: "Reliability & Support",
-    items: ["Production Support", "Incident Management", "Root-Cause Analysis", "Monitoring", "Release & Change Management"],
+    items: [
+      "Production Support",
+      "Incident Management",
+      "Root-Cause Analysis",
+      "Monitoring",
+      "Release & Change Management",
+    ],
   },
   {
     icon: Workflow,
@@ -146,26 +160,48 @@ export default function Home() {
 
         <div className="hero-content container">
           <div className="hero-copy">
-            <div className="availability"><span /> SOFTWARE ENGINEER · CEBU, PH</div>
+            <div className="availability">
+              <span /> SOFTWARE ENGINEER · CEBU, PH
+            </div>
             <p className="hero-intro">Hello, I&apos;m</p>
-            <h1>Dan Christopher <span>Saldariega.</span></h1>
-            <h2>I build thoughtful digital experiences and dependable software.</h2>
+            <h1>
+              Dan Christopher <span>Saldariega.</span>
+            </h1>
+            <h2>
+              I build thoughtful digital experiences and dependable software.
+            </h2>
             <p className="hero-description">
-              Software Engineer with 5+ years of experience across web development, enterprise workflow engineering, and production reliability. Experienced in React, TypeScript, Node.js, .NET, SQL, AWS, and Decisions BPM, with a track record of building and supporting business-critical applications, resolving complex production incidents, and coordinating reliable software releases.
+              Software Engineer with 5+ years of experience across web
+              development, enterprise workflow engineering, and production
+              reliability. Experienced in React, TypeScript, Node.js, .NET, SQL,
+              AWS, and Decisions BPM, with a track record of building and
+              supporting business-critical applications, resolving complex
+              production incidents, and coordinating reliable software releases.
             </p>
             <div className="hero-actions">
-              <Button className="button button-primary" variant="contained" href="#experience" endIcon={<ArrowDownRight size={17} />}>
+              <Button
+                className="button button-primary"
+                variant="contained"
+                href="#experience"
+                endIcon={<ArrowDownRight size={17} />}
+              >
                 Explore my work
               </Button>
-              <Button className="button button-ghost" variant="outlined" href="mailto:dsaldariega@gmail.com" endIcon={<ArrowUpRight size={16} />}>
+              <Button
+                className="button button-ghost"
+                variant="outlined"
+                href="mailto:dsaldariega@gmail.com"
+                endIcon={<ArrowUpRight size={16} />}
+              >
                 Get in touch
               </Button>
             </div>
           </div>
-
-
         </div>
-        <a className="scroll-cue" href="#about"><span>SCROLL TO EXPLORE</span><ArrowDown size={15} /></a>
+        <a className="scroll-cue" href="#about">
+          <span>SCROLL TO EXPLORE</span>
+          <ArrowDown size={15} />
+        </a>
       </header>
 
       <section className="section about-section" id="about">
@@ -176,18 +212,35 @@ export default function Home() {
               title="Engineering with purpose, from the first line to production."
             />
             <p className="about-lead">
-              I&apos;m a Software Engineer with 5+ years of experience spanning web application development, enterprise workflow engineering, and production reliability.
+              I&apos;m a Software Engineer with 5+ years of experience spanning
+              web application development, enterprise workflow engineering, and
+              production reliability.
             </p>
             <p>
-              My development experience includes React, Redux, TypeScript, JavaScript, Node.js, Express, GraphQL, .NET, and SQL. I also work with Decisions BPM to develop and maintain enterprise workflows supporting operational processes across healthcare institutions.
+              My development experience includes React, Redux, TypeScript,
+              JavaScript, Node.js, Express, GraphQL, .NET, and SQL. I also work
+              with Decisions BPM to develop and maintain enterprise workflows
+              supporting operational processes across healthcare institutions.
             </p>
             <p>
-              My background includes production incident management, root-cause analysis, application monitoring, release coordination, and cloud infrastructure support across AWS and Azure. I focus on practical, maintainable solutions and reliable software operations.
+              My background includes production incident management, root-cause
+              analysis, application monitoring, release coordination, and cloud
+              infrastructure support across AWS and Azure. I focus on practical,
+              maintainable solutions and reliable software operations.
             </p>
             <div className="about-facts">
-              <div><strong>5+</strong><span>Years in software</span></div>
-              <div><strong>3</strong><span>Professional roles</span></div>
-              <div><strong>Full cycle</strong><span>Build · ship · support</span></div>
+              <div>
+                <strong>5+</strong>
+                <span>Years in software</span>
+              </div>
+              <div>
+                <strong>3</strong>
+                <span>Professional roles</span>
+              </div>
+              <div>
+                <strong>Full cycle</strong>
+                <span>Build · ship · support</span>
+              </div>
             </div>
           </div>
         </div>
@@ -206,12 +259,16 @@ export default function Home() {
               return (
                 <article className="skill-card" key={skill.title}>
                   <div className="skill-card-top">
-                    <span className="skill-icon"><Icon size={20} strokeWidth={1.7} /></span>
+                    <span className="skill-icon">
+                      <Icon size={20} strokeWidth={1.7} />
+                    </span>
                     <span className="skill-index">0{index + 1}</span>
                   </div>
                   <h3>{skill.title}</h3>
                   <div className="skill-tags">
-                    {skill.items.map((item) => <span key={item}>{item}</span>)}
+                    {skill.items.map((item) => (
+                      <span key={item}>{item}</span>
+                    ))}
                   </div>
                 </article>
               );
@@ -230,7 +287,9 @@ export default function Home() {
           <div className="timeline">
             {experience.map((job, index) => (
               <article className="timeline-item" key={job.company}>
-                <div className="timeline-marker"><span /></div>
+                <div className="timeline-marker">
+                  <span />
+                </div>
                 <div className="timeline-date">
                   <span>{job.dates}</span>
                   {job.type ? <small>{job.type}</small> : null}
@@ -239,17 +298,23 @@ export default function Home() {
                   <div className="job-heading">
                     <div>
                       <h3>{job.role}</h3>
-                      <p className="company-name">{job.company} <span>·</span> {job.location}</p>
+                      <p className="company-name">
+                        {job.company} <span>·</span> {job.location}
+                      </p>
                     </div>
                     <span className="job-count">0{index + 1}</span>
                   </div>
                   <ul className="job-points">
                     {job.points.map((point) => (
-                      <li key={point}><Check size={15} /> <span>{point}</span></li>
+                      <li key={point}>
+                        <Check size={15} /> <span>{point}</span>
+                      </li>
                     ))}
                   </ul>
                   <div className="job-stack">
-                    {job.stack.map((item) => <span key={item}>{item}</span>)}
+                    {job.stack.map((item) => (
+                      <span key={item}>{item}</span>
+                    ))}
                   </div>
                 </div>
               </article>
@@ -270,35 +335,71 @@ export default function Home() {
               <div className="project-content">
                 <div className="project-meta">
                   <span className="eyebrow">PERSONAL PROJECT · 01</span>
-                  <span className="project-status"><i /> In development</span>
+                  <span className="project-status">
+                    <i /> In development
+                  </span>
                 </div>
                 <h3>Dili Labad Members Sinking Fund Management System</h3>
-                <p className="project-subtitle">DLMSF · Full-stack web application</p>
+                <p className="project-subtitle">
+                  DLMSF · Full-stack web application
+                </p>
                 <p className="project-description">
-                  A management system designed to help administrators and members organize sinking fund contributions, loans, repayments, and financial activity.
+                  A management system designed to help administrators and
+                  members organize sinking fund contributions, loans,
+                  repayments, and financial activity.
                 </p>
                 <div className="project-detail-grid">
                   <div>
                     <h4>Purpose</h4>
-                    <p>Make member fund administration clearer and more consistent by bringing weekly contributions, loan requests, repayment tracking, and audit records into one workflow.</p>
+                    <p>
+                      Make member fund administration clearer and more
+                      consistent by bringing weekly contributions, loan
+                      requests, repayment tracking, and audit records into one
+                      workflow.
+                    </p>
                   </div>
                   <div>
                     <h4>Project goals</h4>
                     <ul>
                       <li>Simplify member and contribution management.</li>
-                      <li>Provide a clear loan request and approval process.</li>
-                      <li>Track repayments and keep financial actions auditable.</li>
-                      <li>Reduce repetitive admin work through bulk contribution tools.</li>
+                      <li>
+                        Provide a clear loan request and approval process.
+                      </li>
+                      <li>
+                        Track repayments and keep financial actions auditable.
+                      </li>
+                      <li>
+                        Reduce repetitive admin work through bulk contribution
+                        tools.
+                      </li>
                     </ul>
                   </div>
                 </div>
-                <Stack className="project-stack" direction="row" flexWrap="wrap" gap={1}>
-                  {["Next.js", "React", "TypeScript", "Express", "Supabase", "PostgreSQL"].map((item) => (
+                <Stack
+                  className="project-stack"
+                  direction="row"
+                  flexWrap="wrap"
+                  gap={1}
+                >
+                  {[
+                    "Next.js",
+                    "React",
+                    "TypeScript",
+                    "Express",
+                    "Supabase",
+                    "PostgreSQL",
+                  ].map((item) => (
                     <Chip key={item} label={item} size="small" />
                   ))}
                 </Stack>
-                <a className="project-link" href="https://github.com/dsaldariega/dlmsf-app" target="_blank" rel="noreferrer">
-                  View source on GitHub <Github size={16} /> <ArrowUpRight size={15} />
+                <a
+                  className="project-link"
+                  href="https://github.com/dsaldariega/dlmsf-app"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View source on GitHub <Github size={16} />{" "}
+                  <ArrowUpRight size={15} />
                 </a>
               </div>
             </article>
@@ -307,37 +408,72 @@ export default function Home() {
               <div className="project-content">
                 <div className="project-meta">
                   <span className="eyebrow">PERSONAL PROJECT · 02</span>
-                  <span className="project-status"><i /> Live application</span>
+                  <span className="project-status">
+                    <i /> Live application
+                  </span>
                 </div>
                 <h3>BudgetNest</h3>
-                <p className="project-subtitle">Personal finance web application</p>
+                <p className="project-subtitle">
+                  Personal finance web application
+                </p>
                 <p className="project-description">
-                  A personal finance workspace built to make everyday money management easier to organize, understand, and keep up with.
+                  A personal finance workspace built to make everyday money
+                  management easier to organize, understand, and keep up with.
                 </p>
                 <div className="project-detail-grid">
                   <div>
                     <h4>Purpose</h4>
-                    <p>Bring budgets, accounts, transactions, savings goals, loans, subscriptions, and financial activity together in one focused workspace.</p>
+                    <p>
+                      Bring budgets, accounts, transactions, savings goals,
+                      loans, subscriptions, and financial activity together in
+                      one focused workspace.
+                    </p>
                   </div>
                   <div>
                     <h4>Project goals</h4>
                     <ul>
-                      <li>Make budgets and everyday spending easier to follow.</li>
+                      <li>
+                        Make budgets and everyday spending easier to follow.
+                      </li>
                       <li>Keep accounts and transactions organized.</li>
-                      <li>Support savings goals and recurring financial commitments.</li>
+                      <li>
+                        Support savings goals and recurring financial
+                        commitments.
+                      </li>
                     </ul>
                   </div>
                 </div>
-                <Stack className="project-stack" direction="row" flexWrap="wrap" gap={1}>
-                  {["Next.js", "React", "TypeScript", "Node.js", "Supabase"].map((item) => (
+                <Stack
+                  className="project-stack"
+                  direction="row"
+                  flexWrap="wrap"
+                  gap={1}
+                >
+                  {[
+                    "Next.js",
+                    "React",
+                    "TypeScript",
+                    "Node.js",
+                    "Supabase",
+                  ].map((item) => (
                     <Chip key={item} label={item} size="small" />
                   ))}
                 </Stack>
                 <div className="project-links">
-                  <a className="project-link" href="https://github.com/dsaldariega/personalized-budget-tracker" target="_blank" rel="noreferrer">
+                  <a
+                    className="project-link"
+                    href="https://github.com/dsaldariega/personalized-budget-tracker"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     View source <Github size={16} /> <ArrowUpRight size={15} />
                   </a>
-                  <a className="project-link" href="https://budgetnest-app.vercel.com" target="_blank" rel="noreferrer">
+                  <a
+                    className="project-link"
+                    href="https://budgetnest-app.vercel.app"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Open live app <ArrowUpRight size={16} />
                   </a>
                 </div>
@@ -350,19 +486,26 @@ export default function Home() {
       <section className="section education-section" id="education">
         <div className="container education-grid">
           <div>
-            <SectionHeading eyebrow="05 / THE FOUNDATION" title="Always learning." />
+            <SectionHeading
+              eyebrow="05 / THE FOUNDATION"
+              title="Always learning."
+            />
             <p className="education-intro">
-              A foundation in information technology, strengthened through hands-on
-              experience and continuous learning.
+              A foundation in information technology, strengthened through
+              hands-on experience and continuous learning.
             </p>
           </div>
           <article className="education-card">
-            <div className="education-icon"><GraduationCap size={23} /></div>
+            <div className="education-icon">
+              <GraduationCap size={23} />
+            </div>
             <div>
               <span className="education-date">2015 — 2020</span>
               <h3>Bachelor of Science in Information Technology</h3>
               <p>Cebu Institute of Technology – University</p>
-              <span className="education-location"><MapPin size={13} /> Cebu City, Philippines</span>
+              <span className="education-location">
+                <MapPin size={13} /> Cebu City, Philippines
+              </span>
             </div>
             <ArrowUpRight className="education-arrow" size={19} />
           </article>
@@ -373,23 +516,73 @@ export default function Home() {
         <div className="container contact-inner">
           <div className="contact-copy">
             <span className="eyebrow">06 / WHAT&apos;S NEXT?</span>
-            <h2>Have something<br />good in mind<span>?</span></h2>
-            <p>I&apos;m always open to connecting with people who care about building thoughtful, reliable software.</p>
+            <h2>
+              Have something
+              <br />
+              good in mind<span>?</span>
+            </h2>
+            <p>
+              I&apos;m always open to connecting with people who care about
+              building thoughtful, reliable software.
+            </p>
           </div>
           <div className="contact-details">
-            <a href="mailto:dsaldariega@gmail.com"><span className="contact-icon"><Mail size={18} /></span><span><small>EMAIL</small>dsaldariega@gmail.com</span><span className="email-action">Email me <ArrowUpRight size={14} /></span></a>
-            <a href="https://www.linkedin.com/in/dan-christopher-saldariega-3004a61ab/" target="_blank" rel="noreferrer"><span className="contact-icon"><Linkedin size={18} /></span><span><small>LINKEDIN</small>dan-christopher-saldariega</span><ArrowUpRight size={16} /></a>
-            <a href="https://github.com/dsaldariega" target="_blank" rel="noreferrer"><span className="contact-icon"><Github size={18} /></span><span><small>GITHUB</small>github.com/dsaldariega</span><ArrowUpRight size={16} /></a>
-            <div className="contact-location"><MapPin size={16} /> Based in Liloan, Cebu, Philippines</div>
+            <a href="mailto:dsaldariega@gmail.com">
+              <span className="contact-icon">
+                <Mail size={18} />
+              </span>
+              <span>
+                <small>EMAIL</small>dsaldariega@gmail.com
+              </span>
+              <span className="email-action">
+                Email me <ArrowUpRight size={14} />
+              </span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dan-christopher-saldariega-3004a61ab/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="contact-icon">
+                <Linkedin size={18} />
+              </span>
+              <span>
+                <small>LINKEDIN</small>dan-christopher-saldariega
+              </span>
+              <ArrowUpRight size={16} />
+            </a>
+            <a
+              href="https://github.com/dsaldariega"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="contact-icon">
+                <Github size={18} />
+              </span>
+              <span>
+                <small>GITHUB</small>github.com/dsaldariega
+              </span>
+              <ArrowUpRight size={16} />
+            </a>
+            <div className="contact-location">
+              <MapPin size={16} /> Based in Liloan, Cebu, Philippines
+            </div>
           </div>
         </div>
       </section>
 
       <footer className="footer">
         <div className="container footer-inner">
-          <a className="wordmark footer-mark" href="#top">DS<span>.</span></a>
-          <p>Designed & built with care. © {new Date().getFullYear()} Dan Christopher Saldariega.</p>
-          <a className="back-top" href="#top">BACK TO TOP <ArrowUpRight size={14} /></a>
+          <a className="wordmark footer-mark" href="#top">
+            DS<span>.</span>
+          </a>
+          <p>
+            Designed & built with care. © {new Date().getFullYear()} Dan
+            Christopher Saldariega.
+          </p>
+          <a className="back-top" href="#top">
+            BACK TO TOP <ArrowUpRight size={14} />
+          </a>
         </div>
       </footer>
     </main>

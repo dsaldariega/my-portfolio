@@ -32,22 +32,22 @@ const skills = [
   {
     icon: Database,
     title: "Database",
-    items: ["MySQL", "SQL"],
+    items: ["SQL", "MySQL", "RethinkDB"],
   },
   {
     icon: Globe2,
     title: "Cloud & DevOps",
-    items: ["AWS", "Microsoft Azure", "Jenkins (CI/CD)", "Grafana"],
+    items: ["AWS", "Microsoft Azure", "Jenkins", "Terraform", "Grafana"],
   },
   {
     icon: ShieldCheck,
     title: "Reliability & Support",
-    items: ["Incident Management", "Monitoring", "Troubleshooting", "Release Management"],
+    items: ["Production Support", "Incident Management", "Root-Cause Analysis", "Monitoring", "Release & Change Management"],
   },
   {
     icon: Workflow,
     title: "Tools & Platforms",
-    items: ["Git", "Jira", "Confluence", "ServiceNow", "Decisions BPM"],
+    items: ["Decisions BPM", "Git", "Jira", "Confluence", "ServiceNow"],
   },
 ];
 
@@ -58,12 +58,14 @@ const experience = [
     role: "Application Developer",
     dates: "Nov 2024 — Present",
     type: "Current role",
-    stack: ["Decisions BPM", "SQL", "Jira"],
+    stack: ["Decisions BPM", "SQL", "Workflow Engineering"],
     points: [
-      "Maintain and enhance business-critical workflow applications built on Decisions BPM.",
-      "Investigate and resolve production workflow issues, helping keep business processes reliable.",
-      "Translate business requirements into workflow enhancements and new features backed by SQL data.",
-      "Monitor application performance and uptime, and support ongoing operational improvements.",
+      "Develop and maintain business-critical Decisions BPM and SQL workflow applications supporting operational processes across 60+ healthcare institutions.",
+      "Engineer and support enterprise asset management workflows for equipment disposal, write-off, exchange, transfer, and verification across institutions and cost centres.",
+      "Maintain high-volume billing and payment workflows, including electronic invoicing, transaction processing, multi-tier approvals, and external system integrations.",
+      "Troubleshoot production issues involving workflow routing, approval assignments, automated notifications, form processing, and cross-system data exchange.",
+      "Deliver change requests for payment and claims modules, updating shared components such as bank configurations, approver matrices, and operational dashboards.",
+      "Work with support teams and business stakeholders to investigate incidents, translate requirements into technical solutions, and keep workflow operations running reliably.",
     ],
   },
   {
@@ -71,15 +73,13 @@ const experience = [
     location: "Philippines",
     role: "Software Engineer",
     dates: "Aug 2022 — Oct 2024",
-    stack: ["React", "Node.js", "Express", ".NET", "Azure", "Grafana", "Jenkins"],
+    stack: ["React", ".NET", "SQL", "AWS", "Terraform", "Grafana", "Jenkins"],
     points: [
-      "Built and maintained React web application components, optimizing performance across devices and browsers.",
-      "Developed server-side features and REST APIs using Node.js and Express, and integrated with .NET APIs.",
-      "Implemented authentication and security features for client applications.",
-      "Refactored legacy code, fixed defects, and optimized backend performance.",
-      "Monitored applications with Grafana and handled incident response, investigating issues and coordinating fixes through ITIL-style incident management.",
-      "Supported deployments, release management, automation, and security and compliance processes.",
-      "Collaborated with cross-functional and client teams to maintain reliability and operational stability.",
+      "Resolved 750+ complex Level 2 production incidents through ServiceNow, maintaining an SLA adherence rate above 85% across enterprise applications built with React, .NET, and SQL.",
+      "Served as a Directly Responsible Individual for production operations, monitoring runtime health through Grafana, leading incident triage, and providing status updates to leadership.",
+      "Coordinated production releases through Jenkins by validating commits, preparing change requests, and working with development teams to deploy defect fixes safely.",
+      "Administered AWS environments and maintained Terraform infrastructure-as-code configurations for account provisioning, access controls, and scheduled credential and key rotation.",
+      "Contributed to effort-sizing and root-cause analysis sessions to assess change complexity and help prevent recurring production defects.",
     ],
   },
   {
@@ -87,12 +87,11 @@ const experience = [
     location: "Philippines",
     role: "Software Engineer",
     dates: "Jan 2021 — Jun 2022",
-    stack: ["React", "TypeScript", "Node.js", "Express", "GraphQL"],
+    stack: ["React", "TypeScript", "Node.js", "GraphQL", "RethinkDB"],
     points: [
-      "Developed responsive web applications using React and TypeScript.",
-      "Built backend services with Node.js, Express, and GraphQL, including supporting database design.",
-      "Improved application usability and navigation to create clearer user experiences.",
-      "Wrote and documented test plans, procedures, and results to support quality releases.",
+      "Built reusable UI templates and foundational components for an internal application platform using React, TypeScript, Node.js, GraphQL, and RethinkDB.",
+      "Developed and maintained features for a digital asset and product information management platform handling high-volume product catalogs and media assets.",
+      "Investigated and resolved client-reported production defects, including cart calculation discrepancies and responsive CSS and layout issues.",
     ],
   },
 ];
@@ -152,13 +151,7 @@ export default function Home() {
             <h1>Dan Christopher <span>Saldariega.</span></h1>
             <h2>I build thoughtful digital experiences and dependable software.</h2>
             <p className="hero-description">
-              Software Engineer with 5+ years of experience building and maintaining
-              web applications with React, TypeScript, Node.js, and .NET. Experienced
-              in the full delivery cycle: developing features, improving performance,
-              resolving production incidents, and supporting deployments on Azure and
-              AWS. I combine frontend development skills with an application support
-              and reliability background, helping keep software easy to run, monitor,
-              and maintain.
+              Software Engineer with 5+ years of experience across web development, enterprise workflow engineering, and production reliability. Experienced in React, TypeScript, Node.js, .NET, SQL, AWS, and Decisions BPM, with a track record of building and supporting business-critical applications, resolving complex production incidents, and coordinating reliable software releases.
             </p>
             <div className="hero-actions">
               <Button className="button button-primary" variant="contained" href="#experience" endIcon={<ArrowDownRight size={17} />}>
@@ -183,20 +176,13 @@ export default function Home() {
               title="Engineering with purpose, from the first line to production."
             />
             <p className="about-lead">
-              I&apos;m a Software Engineer with 5+ years of experience building and
-              maintaining web applications with React, TypeScript, Node.js, and .NET.
+              I&apos;m a Software Engineer with 5+ years of experience spanning web application development, enterprise workflow engineering, and production reliability.
             </p>
             <p>
-              I&apos;ve worked across frontend and backend development, application
-              support, reliability, and low-code application development with Decisions
-              BPM. My technical experience also includes AWS, Azure, Jenkins, Grafana,
-              MySQL, and SQL.
+              My development experience includes React, Redux, TypeScript, JavaScript, Node.js, Express, GraphQL, .NET, and SQL. I also work with Decisions BPM to develop and maintain enterprise workflows supporting operational processes across healthcare institutions.
             </p>
             <p>
-              I&apos;ve supported deployments, monitored application health, resolved
-              production issues, and helped maintain reliable business workflows.
-              I value clear, maintainable solutions and understand that good software
-              needs to work reliably after it reaches users.
+              My background includes production incident management, root-cause analysis, application monitoring, release coordination, and cloud infrastructure support across AWS and Azure. I focus on practical, maintainable solutions and reliable software operations.
             </p>
             <div className="about-facts">
               <div><strong>5+</strong><span>Years in software</span></div>
